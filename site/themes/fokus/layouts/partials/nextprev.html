@@ -1,0 +1,39 @@
+<!-- Pager -->
+<div class="row nextprev">
+    <div class="col-lg-6 col-md-6 next small">
+        <hr />
+        {{- if .NextInSection -}}
+            {{- with .NextInSection -}}
+            <a href="{{- .RelPermalink -}}" class="">
+                <h4>&lsaquo; Prev</h4>
+                <h3>{{- .Title -}}</h3>
+                <p>{{- .Description -}}</p>
+            </a>
+            {{- end -}}
+        {{- else -}}
+            <a class="disabled">
+                <h4>&lsaquo; Prev</h4>
+                <h3>No Content</h3>
+                <p>You're at the first page, there is nothing before this content.</p>
+            </a>
+        {{- end -}}
+    </div>
+    <div class="col-lg-6 col-md-6 previous small">
+        <hr />
+        {{- if .PrevInSection -}}
+            {{- with .PrevInSection -}}
+            <a href="{{- .RelPermalink -}}" class="">
+                <h4>Next &rsaquo;</h4>
+                <h3>{{- .Title -}}</h3>
+                <p>{{- .Description -}}</p>
+            </a>
+            {{- end -}}
+        {{- else -}}
+            <a class="disabled">
+                <h4>Next &rsaquo;</h4>
+                <h3>No Content</h3>
+                <p>You're at the last page, there is nothing after this content.</p>
+            </a>
+        {{- end -}}
+    </div>
+</div>

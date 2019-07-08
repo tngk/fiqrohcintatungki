@@ -1,0 +1,20 @@
+.section-subscribe {
+    border: #e7eef2 1px solid;
+    padding: 30px 15px;
+    background: white;
+    // border-radius: 5px;
+    h3 {
+        margin: 15px 0 15px 0;
+    }
+    p {
+        margin: 15px 0;
+        font-size: 12px;
+        a {
+            font-weight: 700;
+        }
+    }
+    .form-inline {
+        margin: 30px auto;
+        // max-width: 400px;
+    }
+}

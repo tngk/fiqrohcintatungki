@@ -1,0 +1,110 @@
+// Styling for the navbar
+.navbar-main {
+  position: absolute;
+  border-bottom: 1px solid $gray-200;
+  background-color: $white-warm;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  .navbar-brand {
+    font-weight: 300;
+    color: $gray-800;
+    > img {
+      width: 24px;
+      height: 24px;
+      float: left;
+      margin-right: 9px;
+    }
+  }
+  .navbar-checkbox {
+    display:none;
+    &:checked ~ .collapse {
+      display: block;
+    }
+  }
+  .navbar-nav {
+    > .nav-item {
+      > a {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    .navbar-brand {
+      padding: 10px 20px;
+      color: $white-warm;
+      &:focus,
+      &:hover {
+        color: fade-out($white-warm, .2);
+      }
+    }
+    .navbar-nav {
+      > .nav-item {
+        > a {
+          padding: 10px 20px;
+          color: $white-warm;
+          &:focus,
+          &:hover {
+            color: fade-out($white-warm, .2);
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    /*
+    transition: background-color 0.2s;
+    Force Hardware Acceleration in WebKit
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    */
+    /*
+    &.is-fixed {
+      // when the user scrolls down, we hide the header right above the viewport 
+      position: fixed;
+      top: -67px;
+      transition: transform 0.2s;
+      border-bottom: 1px solid darken($white-warm, .05);
+      background-color: fade-out($white-warm, .1);
+      .navbar-brand {
+        color: $gray-900;
+        &:focus,
+        &:hover {
+          color: $primary;
+        }
+      }
+      .navbar-nav {
+        > .nav-item {
+          > a {
+            color: $gray-900;
+            &:focus,
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+    */
+    /*
+    &.is-visible {
+      // if the user changes the scrolling direction, we show the header
+      transform: translate3d(0, 100%, 0);
+    }
+    */
+  }
+}
+
+.navbar-cookie {
+  font-size: 16px;
+  background-color: rgb(237, 239, 245);
+  .navbar-text {
+    color: rgb(79, 79, 79);
+  }
+}

@@ -1,0 +1,11 @@
+{{ if $.Param "commentVisible" }}
+    {{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
+    <div class="post-body entry-comment">
+        {{ template "_internal/disqus.html" . }}
+    </div>
+    {{ else }}
+    <blockquote role="alert">
+        <p><strong>Attention! </strong>Disqus comments not available by default when the website is previewed locally.</p>
+    </blockquote>
+    {{ end }}
+{{ end }}
